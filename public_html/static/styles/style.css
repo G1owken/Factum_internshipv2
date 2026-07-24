@@ -14,10 +14,6 @@
         --width-base: 768;
         --width-current: 100vmin;
     }
-
-    .header__center {
-        top: calc(-32 * var(--width-multiplier));
-    }
 }
 
 @media (max-width: 767px) {
@@ -177,7 +173,7 @@ body {
 }
 
 .header__logo {
-    max-width: calc(72 * var(--width-multiplier));
+    max-width: calc(74 * var(--width-multiplier));
     width: 100%;
     white-space: nowrap;
     min-height: calc(72 * var(--width-multiplier));
