@@ -14,6 +14,7 @@
         --width-base: 768;
         --width-current: 100vmin;
     }
+    
 }
 
 @media (max-width: 767px) {
@@ -21,11 +22,6 @@
         --width-base: 375;
         --width-current: 100vmin;
     }
-}
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
 }
 
 body {
@@ -334,7 +330,7 @@ body {
     width: 100%;
     height: calc(608 * var(--width-multiplier));
     margin: calc(24 * var(--width-multiplier)) auto;
-    background: url("../images/home-about.png") center / cover no-repeat;
+    background: url("../images/home-about.webp") center / cover no-repeat;
     border-top-left-radius: calc(12 * var(--width-multiplier));
     border-bottom-right-radius: calc(12 * var(--width-multiplier));
     border-bottom-left-radius: calc(12 * var(--width-multiplier));
@@ -397,7 +393,7 @@ body {
     max-width: calc(52 * var(--width-multiplier));
     width: 100%;
     margin-left: calc(-1 * var(--width-multiplier));
-    background: url("../images/rounded-corner.png") center / cover no-repeat;
+    background: url("../images/rounded-corner.webp") center / cover no-repeat;
     height: calc(49 * var(--width-multiplier));
 }
 
@@ -419,7 +415,7 @@ body {
     max-width: calc(52 * var(--width-multiplier));
     width: 100%;
     margin-left: calc(-1 * var(--width-multiplier));
-    background: url("../images/rounded-corner.png") center / cover no-repeat;
+    background: url("../images/rounded-corner.webp") center / cover no-repeat;
     height: calc(49 * var(--width-multiplier));
 }
 
@@ -511,7 +507,7 @@ body {
     width: 100%;
     height: calc(49 * var(--width-multiplier));
     margin-right: calc(-2 * var(--width-multiplier));
-    background: url("../images/rouned-corner2.png") center / cover no-repeat;
+    background: url("../images/rouned-corner2.webp") center / cover no-repeat;
 }
 
 .home-components {
@@ -533,8 +529,8 @@ body {
 .component {
     position: sticky;
     top: calc(60 * var(--width-multiplier));
-    width: 100%;
     max-width: calc(1376 * var(--width-multiplier));
+    width: 100%;
     height: calc(669 * var(--width-multiplier));
     border-bottom-left-radius: calc(20 * var(--width-multiplier));
     border-bottom-right-radius: calc(20 * var(--width-multiplier));
@@ -544,22 +540,46 @@ body {
     overflow: hidden;
 }
 
+
 .component1 {
-    z-index: 1;
-}
-
-.component1::before {
-    content: "";
-    position: absolute;
-    inset: 0;
     --blue: #22326ECC;
-    background: linear-gradient(var(--blue), var(--blue)), url("../images/component1.gif") center / cover no-repeat;
-    z-index: 0;
-}
+    background: linear-gradient(var(--blue), var(--blue)), url("../images/component1.gif") center / cover
+    no-repeat;
 
-.component1 > * {
-    position: relative;
-    z-index: 1;
+    mask:
+        linear-gradient(#000 0 0)
+            0 0 /
+            calc(320 * var(--width-multiplier))
+            calc(70 * var(--width-multiplier))
+            no-repeat,
+
+        linear-gradient(#000 0 0)
+            0 calc(69 * var(--width-multiplier)) /
+            calc(100% - calc(20 * var(--width-multiplier)))
+            calc(100% - calc(70 * var(--width-multiplier)) + calc(1 * var(--width-multiplier)))
+            no-repeat,
+         /* Правая вертикаль */
+        linear-gradient(#000 0 0)
+            calc(100%)
+            calc(90 * var(--width-multiplier))
+            /
+            calc(21 * var(--width-multiplier))
+            calc(100% - calc(90 * var(--width-multiplier)))
+            no-repeat,
+        /* Верхнее правое скругление нижнего блока */
+        radial-gradient(
+            circle calc(20 * var(--width-multiplier))
+            at
+            calc(20 * var(--width-multiplier))
+            calc(20 * var(--width-multiplier)),
+            #000 98%,
+            transparent 100%)
+            calc(100%)
+            calc(70 * var(--width-multiplier))
+            /
+            calc(40 * var(--width-multiplier))
+            calc(40 * var(--width-multiplier))
+            no-repeat;
 }
 
 .component1__head {
@@ -576,25 +596,11 @@ body {
 .component1__head::before {
     content: "";
     position: absolute;
-    left: calc(-19 * var(--width-multiplier));
+    left: calc(-20 * var(--width-multiplier));
     max-width: calc(20 * var(--width-multiplier));
     width: 100%;
     height: calc(20 * var(--width-multiplier));
-    background-image: url("../images/rouned-corner3.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.component1__head::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: calc(70 * var(--width-multiplier));
-    max-width: calc(20 * var(--width-multiplier));
-    width: 100%;
-    height: calc(20 * var(--width-multiplier));
-    background-image: url("../images/rouned-corner3.png");
+    background-image: url("../images/rouned-corner3.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -602,115 +608,210 @@ body {
 
 .component2 {
     z-index: 2;
-}
-
-.component2::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    --white: #FFFFFFCC;
+     --white: #FFFFFFCC;
     background: linear-gradient(var(--white), var(--white)), url("../images/component2.gif") center / cover no-repeat;
-    z-index: 0;
-}
+    
+    mask:
+        /* Верхняя горизонталь */
+        linear-gradient(#000 0 0)
+            calc(288 * var(--width-multiplier))
+            0 /
+            calc(260 * var(--width-multiplier))
+            calc(21 * var(--width-multiplier))
+            no-repeat,
 
-.component2 > * {
-    position: relative;
-    z-index: 1;
-}
+        /* Верхний вертикальный блок */
+        linear-gradient(#000 0 0)
+            calc(268 * var(--width-multiplier))
+            calc(21 * var(--width-multiplier))
+            /
+            calc(300 * var(--width-multiplier))
+            calc(50 * var(--width-multiplier))
+            no-repeat,
 
-.component2__head {
-    position: absolute;
-    right: 0;
-    top: 0;
-    max-width: calc(1076 * var(--width-multiplier));
-    width: 100%;
-    height: calc(70 * var(--width-multiplier));
-    border-bottom-left-radius: calc(20 * var(--width-multiplier));
-    background-color: var(--white);
-}
+        /* Верхнее левое скругление */
+        radial-gradient(
+            circle calc(20 * var(--width-multiplier))
+            at
+            calc(20 * var(--width-multiplier))
+            calc(20 * var(--width-multiplier)),
+            #000 98%,
+            transparent 100%)
+            calc(268 * var(--width-multiplier))
+            0 /
+            calc(40 * var(--width-multiplier))
+            calc(40 * var(--width-multiplier))
+            no-repeat,
 
-.component2__head::before {
-    content: "";
-    position: absolute;
-    left: calc(-19 * var(--width-multiplier));
-    max-width: calc(20 * var(--width-multiplier));
-    width: 100%;
-    height: calc(20 * var(--width-multiplier));
-    background-image: url("../images/rouned-corner3.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.component2__head::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: calc(70 * var(--width-multiplier));
-    max-width: calc(20 * var(--width-multiplier));
-    width: 100%;
-    height: calc(20 * var(--width-multiplier));
-    background-image: url("../images/rouned-corner3.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+        /* Верхнее правое скругление */
+        radial-gradient(
+            circle calc(20 * var(--width-multiplier))
+            at
+            calc(20 * var(--width-multiplier))
+            calc(20 * var(--width-multiplier)),
+            #000 98%,
+            transparent 100%)
+            calc(528 * var(--width-multiplier))
+            0 /
+            calc(40 * var(--width-multiplier))
+            calc(40 * var(--width-multiplier))
+            no-repeat,
+            /* Основная нижняя часть */
+        linear-gradient(#000 0 0)
+            calc(20 * var(--width-multiplier))
+            calc(70 * var(--width-multiplier))
+            /
+            calc(100% - calc(40 * var(--width-multiplier)))
+            calc(100% - calc(70 * var(--width-multiplier)))
+            no-repeat,
+        /* Левая вертикаль */
+        linear-gradient(#000 0 0)
+            0
+            calc(90 * var(--width-multiplier))
+            /
+            calc(21 * var(--width-multiplier))
+            calc(100% - calc(90 * var(--width-multiplier)))
+            no-repeat,
+        /* Верхнее левое скругление нижнего блока */
+        radial-gradient(
+            circle calc(20 * var(--width-multiplier))
+            at
+            calc(20 * var(--width-multiplier))
+            calc(20 * var(--width-multiplier)),
+            #000 98%,
+            transparent 100%)
+            0
+            calc(70 * var(--width-multiplier))
+            /
+            calc(40 * var(--width-multiplier))
+            calc(40 * var(--width-multiplier))
+            no-repeat,
+        /* Правая вертикаль */
+        linear-gradient(#000 0 0)
+            calc(100%)
+            calc(90 * var(--width-multiplier))
+            /
+            calc(21 * var(--width-multiplier))
+            calc(100% - calc(90 * var(--width-multiplier)))
+            no-repeat,
+        /* Верхнее правое скругление нижнего блока */
+        radial-gradient(
+            circle calc(20 * var(--width-multiplier))
+            at
+            calc(20 * var(--width-multiplier))
+            calc(20 * var(--width-multiplier)),
+            #000 98%,
+            transparent 100%)
+            calc(100%)
+            calc(70 * var(--width-multiplier))
+            /
+            calc(40 * var(--width-multiplier))
+            calc(40 * var(--width-multiplier))
+            no-repeat;
 }
 
 .component3 {
     z-index: 2;
-}
-
-.component3::before {
-    content: "";
-    position: absolute;
-    inset: 0;
     --blue: #22326ECC;
-    background: linear-gradient(var(--blue), var(--blue)), url("../images/component3.png") center / cover no-repeat;
-    z-index: 0;
+    background:
+        linear-gradient(var(--blue), var(--blue)),
+        url("../images/component3.webp") center / cover no-repeat;
+    mask:
+        /* Верхняя горизонталь */
+        linear-gradient(#000 0 0)
+            calc(556 * var(--width-multiplier))
+            0 /
+            calc(260 * var(--width-multiplier))
+            calc(21 * var(--width-multiplier))
+            no-repeat,
+        /* Верхний вертикальный блок */
+        linear-gradient(#000 0 0)
+            calc(536 * var(--width-multiplier))
+            calc(21 * var(--width-multiplier))
+            /
+            calc(300 * var(--width-multiplier))
+            calc(50 * var(--width-multiplier))
+            no-repeat,
+        /* Верхнее левое скругление */
+        radial-gradient(
+            circle calc(20 * var(--width-multiplier))
+            at
+            calc(20 * var(--width-multiplier))
+            calc(20 * var(--width-multiplier)),
+            #000 98%,
+            transparent 100%)
+            calc(536 * var(--width-multiplier))
+            0 /
+            calc(40 * var(--width-multiplier))
+            calc(40 * var(--width-multiplier))
+            no-repeat,
+        /* Верхнее правое скругление */
+        radial-gradient(
+            circle calc(20 * var(--width-multiplier))
+            at
+            calc(20 * var(--width-multiplier))
+            calc(20 * var(--width-multiplier)),
+            #000 98%,
+            transparent 100%)
+            calc(796 * var(--width-multiplier))
+            0 /
+            calc(40 * var(--width-multiplier))
+            calc(40 * var(--width-multiplier))
+            no-repeat,
+        /* Основная нижняя часть */
+        linear-gradient(#000 0 0)
+            calc(20 * var(--width-multiplier))
+            calc(70 * var(--width-multiplier))
+            /
+            calc(100% - calc(40 * var(--width-multiplier)))
+            calc(100% - calc(70 * var(--width-multiplier)))
+            no-repeat,
+        /* Левая вертикаль */
+        linear-gradient(#000 0 0)
+            0
+            calc(90 * var(--width-multiplier))
+            /
+            calc(21 * var(--width-multiplier))
+            calc(100% - calc(90 * var(--width-multiplier)))
+            no-repeat,
+        /* Верхнее левое скругление нижнего блока */
+        radial-gradient(
+            circle calc(20 * var(--width-multiplier))
+            at
+            calc(20 * var(--width-multiplier))
+            calc(20 * var(--width-multiplier)),
+            #000 98%,
+            transparent 100%)
+            0
+            calc(70 * var(--width-multiplier))
+            /
+            calc(40 * var(--width-multiplier))
+            calc(40 * var(--width-multiplier))
+            no-repeat,
+        /* Правая вертикаль */
+        linear-gradient(#000 0 0)
+            calc(100%)
+            calc(90 * var(--width-multiplier))
+            /
+            calc(21 * var(--width-multiplier))
+            calc(100% - calc(90 * var(--width-multiplier)))
+            no-repeat,
+        /* Верхнее правое скругление нижнего блока */
+        radial-gradient(
+            circle calc(20 * var(--width-multiplier))
+            at
+            calc(20 * var(--width-multiplier))
+            calc(20 * var(--width-multiplier)),
+            #000 98%,
+            transparent 100%)
+            calc(100%)
+            calc(70 * var(--width-multiplier))
+            /
+            calc(40 * var(--width-multiplier))
+            calc(40 * var(--width-multiplier))
+            no-repeat;
 }
 
-.component3 > * {
-    position: relative;
-    z-index: 1;
-}
-
-.component3__head {
-    position: absolute;
-    right: 0;
-    top: 0;
-    max-width: calc(1076 * var(--width-multiplier));
-    width: 100%;
-    height: calc(70 * var(--width-multiplier));
-    border-bottom-left-radius: calc(20 * var(--width-multiplier));
-    background-color: var(--white);
-}
-
-.component3__head::before {
-    content: "";
-    position: absolute;
-    left: calc(-19 * var(--width-multiplier));
-    max-width: calc(20 * var(--width-multiplier));
-    width: 100%;
-    height: calc(20 * var(--width-multiplier));
-    background-image: url("../images/rouned-corner3.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.component3__head::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: calc(70 * var(--width-multiplier));
-    max-width: calc(20 * var(--width-multiplier));
-    width: 100%;
-    height: calc(20 * var(--width-multiplier));
-    background-image: url("../images/rouned-corner3.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 .component__text {
     display: flex;
     flex-direction: column;
