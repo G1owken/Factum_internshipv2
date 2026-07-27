@@ -575,7 +575,7 @@ body {
             #000 98%,
             transparent 100%)
             calc(100%)
-            calc(70 * var(--width-multiplier))
+            calc(69 * var(--width-multiplier))
             /
             calc(40 * var(--width-multiplier))
             calc(40 * var(--width-multiplier))
@@ -659,7 +659,7 @@ body {
             /* Основная нижняя часть */
         linear-gradient(#000 0 0)
             calc(20 * var(--width-multiplier))
-            calc(70 * var(--width-multiplier))
+            calc(69 * var(--width-multiplier))
             /
             calc(100% - calc(40 * var(--width-multiplier)))
             calc(100% - calc(70 * var(--width-multiplier)))
@@ -681,7 +681,7 @@ body {
             #000 98%,
             transparent 100%)
             0
-            calc(70 * var(--width-multiplier))
+            calc(69 * var(--width-multiplier))
             /
             calc(40 * var(--width-multiplier))
             calc(40 * var(--width-multiplier))
@@ -703,7 +703,7 @@ body {
             #000 98%,
             transparent 100%)
             calc(100%)
-            calc(70 * var(--width-multiplier))
+            calc(69 * var(--width-multiplier))
             /
             calc(40 * var(--width-multiplier))
             calc(40 * var(--width-multiplier))
@@ -722,7 +722,7 @@ body {
             calc(556 * var(--width-multiplier))
             0 /
             calc(260 * var(--width-multiplier))
-            calc(21 * var(--width-multiplier))
+            calc(22 * var(--width-multiplier))
             no-repeat,
         /* Верхний вертикальный блок */
         linear-gradient(#000 0 0)
@@ -761,7 +761,7 @@ body {
         /* Основная нижняя часть */
         linear-gradient(#000 0 0)
             calc(20 * var(--width-multiplier))
-            calc(70 * var(--width-multiplier))
+            calc(69 * var(--width-multiplier))
             /
             calc(100% - calc(40 * var(--width-multiplier)))
             calc(100% - calc(70 * var(--width-multiplier)))
@@ -783,7 +783,7 @@ body {
             #000 98%,
             transparent 100%)
             0
-            calc(70 * var(--width-multiplier))
+            calc(69 * var(--width-multiplier))
             /
             calc(40 * var(--width-multiplier))
             calc(40 * var(--width-multiplier))
@@ -805,7 +805,7 @@ body {
             #000 98%,
             transparent 100%)
             calc(100%)
-            calc(70 * var(--width-multiplier))
+            calc(69 * var(--width-multiplier))
             /
             calc(40 * var(--width-multiplier))
             calc(40 * var(--width-multiplier))
