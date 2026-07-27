@@ -13,8 +13,8 @@
             <div class="header__left">
                 <ul>
                     <li class = "header__left-item1">
-                       <a>О школе</a> 
-                       <div class = "school-about">
+                       <a href="#">О школе</a> 
+                       <div class = "header__left-item1_active">
                         <ul>
                         <li><a href="#">Миссия и ценности</a></li>
                         <li><a href="#">История школы</a></li>
@@ -26,13 +26,24 @@
                        </div>
                     </li>
                     <li>
-                        <a>Поступление</a>
+                        <a href="#">Поступление</a>
                     </li>
                     <li>
-                        <a>Школьная жизнь</a>
+                        <a href="#">Школьная жизнь</a>
                     </li>
-                    <li>
-                        <a>Образование</a>
+                    <li class = "header__left-item4">
+                        <a href="#">Образование</a>
+                        <div class = "header__left-item4_active">
+                        <ul>
+                        <li><a href="#">Школьная программа</a></li>
+                        <li><a href="#">Стоимость обучения</a></li>
+                        <li><a href="#">Кружки и секции</a></li>
+                        <li><a href="#">Школьный тур</a></li>
+                        <li><a href="#">Школьный календарь</a></li>
+                        <li><a href="#">Гранты</a></li>
+                        <li><a href="#">FAQ</a></li>
+                       </ul>
+                       </div>
                     </li>
                 </ul>
             </div>
@@ -40,9 +51,32 @@
                 <img src = "static/images/school-logo.webp" class = "header__logo">
             </div>
             <div class="header__right">
-                <div class="header__phone">
-                    +7 708 707 77 75
-                    <img src = "static/images/arrow-drop-up.webp" class = "header__phone-arrow">
+                <div class = "header__contact">
+                    <div class="header__contact-phone">
+                        +7 708 707 77 75
+                        <img src = "static/images/arrow-drop-up.webp" class = "header__contact-phone-arrow">
+                    </div>
+                    <div class = "header__contact_active">
+                        <div class =  "number">
+                            <a href ="#">+7 708 707 77 75</a>
+                            <p>Приемная</p>
+                        </div>
+                        <div class = "number">
+                            <a href = "#">+7 708 800 20 15</a>
+                            <p>Администрация</p>
+                        </div>
+                        <button class = "order-button">Заказать звонок</button>
+                        <div class = "more-info">
+                            <p>info@prometheus.school</p>
+                            <p>Алматы, ул. Кабанбай батыра 164</p>
+                            <p>Пн–Пт 09:00–18:00</p>
+                            <div class = "social-media">
+                                <a href = "https://www.instagram.com/PROMETHEUS.SCHOOL/"><img src = "static/images/instagram.webp" class = "social-media__photo"></a>
+                                <a><img src = "static/images/telegram.webp" class = "social-media__photo"></a>
+                                <a><img src = "static/images/whatsapp.webp" class = "social-media__photo"></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="header__lang">
                     <img src = "static/images/earth.webp" class = "header__lang-earth">
@@ -88,7 +122,7 @@
                 <div class="home-about__bottom-item bottom2"></div>
                 <p>Школа с комфортной инфраструктурой, современными лабораториями, проектными классами и англоязычными программами, где дети учатся в атмосфере вдохновения, раскрывают таланты и обретают уверенность</p>
                 <div class = "home-about__bottom-details">
-                    <a href="#" class="home-about__bottom-details-link">
+                    <a href="#">
                         Подробнее
                     </a>
                     <img src="static/images/yellow-arrow.webp" class="home-about__bottom-details-icon">
@@ -181,7 +215,31 @@
             </div>
         </section>
         <section class = "home-registration">
+            <div class = "container home-registration__container">
+                <div class = "home-registration__top">
+                    <div class = "entrance">
+                        <h2>Сделайте первый шаг к поступлению в Prometheus School</h2>
+                        <p>Поможем разобраться, какая программа и формат обучения подойдут вашему ребенку. Расскажем про расписание, подход школы и что важно на старте. Если вы рассматриваете поступление, объясним этапы: с чего начать, какие документы понадобятся и как проходит знакомство со школой.</p>
+                        <ol>
+                            <li>
+                                Оставляете заявку
+                            </li>
+                            <li>
+                                Консультация или школьный тур
+                            </li>
+                            <li>
+                                Следующий шаг по поступлению
+                            </li>
+                        </ol>
+                    </div>
+                    <div class = "consultation-registration">
+                        <h3>Запишитесь на консультацию</h3>
+                    </div>
+                </div>
+                <div class = "home-registration__bottom">
 
+                </div>
+            </div>
         </section>
         <section class = "home-school">
 

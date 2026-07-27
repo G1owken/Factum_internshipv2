@@ -20,3 +20,18 @@ function nextSlide() {
     }, 3000);
 }
 nextSlide();
+
+const homeAboutBottomDetails = document.querySelector('.home-about__bottom-details');
+const img = homeAboutBottomDetails.querySelector("img");
+
+homeAboutBottomDetails.addEventListener("mouseenter",
+    () => {
+        img.src ="./static/images/yellow-arrow-action.webp";
+    }
+);
+
+homeAboutBottomDetails.addEventListener("mouseleave",
+    () => {
+        img.src ="./static/images/yellow-arrow.webp";
+    }
+);
