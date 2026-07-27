@@ -656,13 +656,37 @@ body {
             calc(40 * var(--width-multiplier))
             calc(40 * var(--width-multiplier))
             no-repeat,
-            /* Основная нижняя часть */
+        /* Вогнутый угол слева */
+        radial-gradient(
+            circle calc(20 * var(--width-multiplier))
+            at 0 0,
+            transparent 98%,
+            #000 100%)
+            calc(249 * var(--width-multiplier))
+            calc(50 * var(--width-multiplier))
+            /
+            calc(20 * var(--width-multiplier))
+            calc(20 * var(--width-multiplier))
+            no-repeat,
+        /* Вогнутый угол справа */
+        radial-gradient(
+            circle calc(20 * var(--width-multiplier))
+            at 100% 0,
+            transparent 98%,
+            #000 100%)
+            calc(568 * var(--width-multiplier))
+            calc(50 * var(--width-multiplier))
+            /
+            calc(20 * var(--width-multiplier))
+            calc(20 * var(--width-multiplier))
+            no-repeat,
+        /* Основная нижняя часть */
         linear-gradient(#000 0 0)
             calc(20 * var(--width-multiplier))
             calc(69 * var(--width-multiplier))
             /
             calc(100% - calc(40 * var(--width-multiplier)))
-            calc(100% - calc(70 * var(--width-multiplier)))
+            calc(100% - calc(69 * var(--width-multiplier)))
             no-repeat,
         /* Левая вертикаль */
         linear-gradient(#000 0 0)
@@ -758,13 +782,37 @@ body {
             calc(40 * var(--width-multiplier))
             calc(40 * var(--width-multiplier))
             no-repeat,
+        /* Вогнутый угол слева */
+        radial-gradient(
+            circle calc(20 * var(--width-multiplier))
+            at 0 0,
+            transparent 98%,
+            #000 100%)
+            calc(517 * var(--width-multiplier))
+            calc(50 * var(--width-multiplier))
+            /
+            calc(20 * var(--width-multiplier))
+            calc(20 * var(--width-multiplier))
+            no-repeat,
+        /* Вогнутый угол справа */
+        radial-gradient(
+            circle calc(20 * var(--width-multiplier))
+            at 100% 0,
+            transparent 98%,
+            #000 100%)
+            calc(835 * var(--width-multiplier))
+            calc(50 * var(--width-multiplier))
+            /
+            calc(20 * var(--width-multiplier))
+            calc(20 * var(--width-multiplier))
+            no-repeat,
         /* Основная нижняя часть */
         linear-gradient(#000 0 0)
             calc(20 * var(--width-multiplier))
             calc(69 * var(--width-multiplier))
             /
             calc(100% - calc(40 * var(--width-multiplier)))
-            calc(100% - calc(70 * var(--width-multiplier)))
+            calc(100% - calc(69 * var(--width-multiplier)))
             no-repeat,
         /* Левая вертикаль */
         linear-gradient(#000 0 0)
@@ -824,11 +872,24 @@ body {
 
 .component__text h2 {
     position: absolute;
-    top: calc(110 * var(--width-multiplier));
+    margin: 0;
+    font-weight: 600;
+    font-size: calc(24 * var(--width-multiplier));
+    line-height: 110.00000000000001%;
+    letter-spacing: 0%;
+
+}
+
+.component__text h3 {
+    position: absolute;
+    top: calc(134 * var(--width-multiplier));
     margin: 0;
     font-weight: 900;
+    font-style: var(--black);
     font-size: calc(64 * var(--width-multiplier));
     line-height: 120%;
+    letter-spacing: 0%;
+    vertical-align: middle;
 }
 
 .component__text p {
@@ -886,14 +947,13 @@ body {
     background-color: var(--white);
 }
 
-.text2 {
+.text2 h2 {
+    position: absolute;
+    left: calc(300 * var(--width-multiplier));
     color: var(--blue);
-    font-weight: 600;
-    font-size: calc(24 * var(--width-multiplier));
-    line-height: 110%;
 }
 
-.text2 h2 {
+.text2 h3 {
     color: var(--blue);
 }
 
@@ -913,4 +973,9 @@ body {
 
 .list2 li {
     color: var(--blue);
+}
+
+.text3 h2 {
+    position: absolute;
+    left: calc(568 * var(--width-multiplier));
 }
